@@ -1,0 +1,2 @@
+Google Drive link to the original POI dataset (6000 entries in .geojson format):
+https://drive.google.com/file/d/1bfGOMlUJNLwZ2zwyToQhy86a0CFA3lSS/view?usp=sharing

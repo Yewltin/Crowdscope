@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CrowdScope: Attractions</title>
+  <link rel="icon" type="image/png" href="media/CsFav.ico" />
+  <link rel="stylesheet" href="attractStyle.css" />
+
+  <!-- Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+ 
+  
+  <nav class="header">
+    <img id="logo" src="media/cscope.png" height="60" width="60" alt="Logo" onclick="exploreMap()" alt="Click to return to the Map Page"/>
+    <a id="crowdscope">Crowd<b>Scope</b></a>
+    <div class="dropdown ms-auto" id="menu-container">
+      <button class="btn btn-outline-primary dropdown-toggle" type="button" id="menuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open main menu">
+      Menu
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="menuButton">
+        <li><a class="dropdown-item" href="index.html">Home</a></li>
+        <li><a class="dropdown-item" href="aboutCrowdScope.html">Tutorial</a></li>
+        <li><a class="dropdown-item" href="crowdScope.html">Map</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="overlay-box">
+    <div class="overlay-content">
+        <p class="overlay-title">
+          PLAN YOUR TRIP
+        </p>
+      <b class="overlay-caption">
+        Where to next?
+      </b>
+    </div>
+  </div>
+ <!-- Buttons styled using code for "<", ">" as direction indication -->
+ <div style="position: relative;">
+   <button onclick="scrollAttractBox(-520)" class="scroll-btn left" aria-label="Scrolling to the left">&#8249;</button>
+
+    <div class="attract-box" id="attractScrollBox">
+        <a href="crowdScope.html?category=gallery">
+            <div class="image-container">
+            <img src="media/galleryMan.jpg" alt="Gallery locations" class="attract-image"/>
+            <div class="overlay-text">Galleries</div>
+            </div>
+        </a>
+        
+        <a href="crowdScope.html?category=restaurant">
+            <div class="image-container">
+            <img src="media/restaurantMan.jpeg" alt="Restaurant locations" class="attract-image"/>
+            <div class="overlay-text">Restaurants</div>
+            </div>
+        </a>
+
+        <a href="crowdScope.html?category=park">
+            <div class="image-container">
+            <img src="media/parkMan.jpg" alt="Park locations" class="attract-image"/>
+            <div class="overlay-text">Parks</div>
+            </div>
+        </a>
+
+        <a href="crowdScope.html?category=museum">
+            <div class="image-container">
+            <img src="media/museumMan.jpg" alt="Museum locations" class="attract-image"/>
+            <div class="overlay-text">Museums</div>
+            </div>
+        </a>
+
+        <a href="crowdScope.html?category=shop">
+            <div class="image-container">
+            <img src="media/shopMan.jpg" alt="Shopping locations" class="attract-image"/>
+            <div class="overlay-text">Shopping</div>
+            </div>
+        </a>
+    </div>
+
+    <button onclick="scrollAttractBox(520)" class="scroll-btn right" aria-label="Scrolling to the right">&#8250;</button>
+  </div>
+  <!-- On button click, scrolls roughly image width either direction -->
+  <script>
+    function scrollAttractBox(offset) {
+     const box = document.getElementById('attractScrollBox');
+     box.scrollBy({ left: offset, behavior: 'smooth' });
+    }
+
+    function exploreMap() {
+     window.location.href = "crowdScope.html";
+    }
+
+    
+  </script>
+
+</body>
+</html>

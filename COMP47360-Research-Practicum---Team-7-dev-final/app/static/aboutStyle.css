@@ -1,0 +1,258 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+    overflow-x: hidden;
+}
+
+/* Header for logo styling */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  margin: 0 2.5%;
+}
+
+/* Pointer to show on-click event */
+.CsLogo{
+  cursor: pointer;
+}
+
+/* Logo styling*/
+#crowdscope {
+  font-family: "Outfit", sans-serif;
+  font-size:x-large;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color:#27504a;
+  letter-spacing: -2px;
+}
+
+/* Outer white full-page container */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Centered inner box */
+.inner-container {
+  width: 95%;
+  height: 86%;
+  background-color: #2f5f58; 
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
+}
+
+/* Buttons row */
+.button-container {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Feature buttons */
+.nav-button {
+  font-family: "Urbanist", sans-serif;
+  display: flex;
+  flex: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 2.4vmin;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  height: 2.3rem;
+  border-radius: 10px;
+  background-color: #159b79;
+  border: none;
+  color: #ffffff;
+}
+
+.nav-button.active {
+  background-color: rgb(208, 209, 208);
+  color: rgb(48, 48, 48);
+}
+
+/* Uses href to specify hover effect on marker button */
+.nav-button[href]:hover {
+  background-color: #16caa3;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+
+}
+
+.button-container button.active {
+  background-color: lightgreen;
+  color: black;
+}
+
+
+/* Container for text element on left of page */
+.content-container {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.text-section {
+  position: absolute;
+  z-index: 100;
+  width: 40%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-title {
+  font-family: "Urbanist", sans-serif;
+  font-style: italic;
+  color: white;
+  font-size: 7vmin;
+  width: 80%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.text-heading { 
+  font-family: "Urbanist", sans-serif;
+  margin: 0 20px;
+  color: white;
+  margin-top: 60px;
+  font-size: 2.5vmin;
+  width: 70%;
+
+}
+
+.text-paragraph {
+  flex: 1;
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  margin: 20px;
+  font-size: 2vmin;
+  color: white;
+  width: 70%;
+}
+
+.busy-container {
+  display: flex; 
+  margin-top: 10px;        
+  width: 70%;            
+  margin-left: 20px;          
+}
+
+#busyScale {
+  width: max(35%, 150px);          
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  border: 1px solid #5a5a5a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.busy-box {
+  display: flex;
+  width: 100%;          
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.8vmin;
+  line-height: 1.4;
+  margin-left: 4vmin;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#busyTitle {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#busyText {
+  display: block;
+}
+
+/* Container for demo video on right */
+.image-section {
+  margin-left: auto;
+  margin-top: 60px;
+  background-color: #dddddd34;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  
+  
+}
+
+.image-section video {
+  height: 90%;
+  width: 90%;
+  display: block;
+  object-fit: contain;
+}
+
+#homeButton {        
+ position: fixed;    
+  top: 85%;
+  z-index: 9999;
+  cursor: pointer;
+  width: 30vmin;
+  font-size: 2.4vmin;
+  font-weight: 700;
+  min-width: 50px;
+  height: 2.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #159b79;
+  color: white;
+  z-index: 1000;
+}
+
+#homeButton:hover {
+  background-color: #16caa3;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+
+/* Menu Button and dropdown item styling */
+#menuButton {
+  margin-right: 5.1vw;
+  background-color: #27504a;
+  border: 1px solid #1e3633;
+  color: white;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+#menuButton:hover {
+  cursor: pointer;
+  background-color:#49837a;
+  transition: all 0.2s ease;
+}
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000 !important;
+}  
+
+
+

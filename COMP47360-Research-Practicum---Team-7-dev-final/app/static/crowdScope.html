@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CrowdScope</title>
+  <link rel="shortcut icon" href="media/CsFav.ico" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Mapbox CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS link -->
+  <link href="style.css" rel="stylesheet">
+  <!-- Emoji link (maybe better to use png?) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+   
+  <!-- Loading page -->
+  <div id="loader">
+   <img src="media/CrowdScope.gif" alt="Loading..." class="loading-image" />
+  </div>
+  
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <!-- Joystick container-->
+  <div id="joystick-container">
+    <div id="joystick-thumb" role="region" aria-label="Map joystick control. Use thumb to adjust map angle." tabindex="0"></div>
+  </div>
+  
+  <!-- Zoom control container -->
+  <div class="zoom-controls">
+    <button id="recenter" aria-label="Recenter map">
+      <img src="media/recenter.png" alt="Recenter button" />
+    </button>
+    <button id="zoomIn" aria-label="Zoom in">
+      <img src="media/zoom-in.png" alt="Zoom in button" />
+    </button>
+    <button id="zoomOut" aria-label="Zoom out">
+      <img src="media/zoom-out.png" alt="Zoom out button" />
+    </button>
+  </div>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light header">
+    <div class="container-fluid">
+      <img class="CsLogo" src="media/cscope.png" height="50" width="50" onclick="homePage()" alt="Click to return to the Home Page.">
+      <a class="navbar-brand" id="crowdscope">Crowd<b>Scope</b></a>
+      <div class="dropdown ms-auto" id="menu-container">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="menuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open main menu">
+          Menu
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuButton">
+          <li><a class="dropdown-item" href="index.html">Home</a></li>
+          <li><a class="dropdown-item" href="aboutCrowdScope.html">Tutorial</a></li>
+          <li><a class="dropdown-item" href="attractionsCrowdScope.html">Attractions</a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <!-- Pop-up Tutorial Toast -->
+  <div class="position-fixed top-50 start-0 p-3" style="z-index: 1000;" id="toastDiv" hidden>
+    <div class="toast show align-items-center text-bg-light p-2" role="alert" aria-live="polite" aria-atomic="true" id="crowdscopeToast">
+      <div class="d-flex">
+        <div class="toast-body">
+          Check the <a href="aboutCrowdScope.html" class="text-info text-decoration-underline">Tutorial</a> page for help with CrowdScope's features!</br>
+          <br>
+          <b>This page is accessible with screen readers.</b>
+        </div>
+        <button type="button" class="btn-close btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close tutorial notification" id="toastCloseBtn"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Search bar -->
+    <div class="search-container">
+      <label for="searchInput" class="visually-hidden">Search the map</label>
+      <input
+       type="text"
+       class="form-control mb-3"
+       id="searchInput"
+       placeholder="Search Maps"
+     >
+     <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    </div>
+    <ul id="suggestions" class="list-group"></ul>
+
+    <!-- Favourites Dropdown -->
+    <div class="dropdown">
+      <button id="favouritesButton" class="btn btn-primary dropdown-toggle" aria-expanded="false" aria-label="Show favourites list">
+       <img src="media/star.png" alt="Favourites" style="height: 20px;">
+      </button>
+      <!-- Favourites List (Items will be dynamically added)  -->
+      <ul id="favouritesList" class="dropdown-menu"></ul>
+    </div>    
+
+
+    <!-- Day buttons -->
+    <div id="dayButtons" aria-label="Select a day to view busyness"></div>
+
+    <!-- Time Slider -->
+    <div class="bubble-div" aria-label="Time slider">
+      <div class="slider-container" id="slideContainer">
+        <div id="hourValue">Time Selected: <span id="hourDisplay"></span></div>
+        <input type="range" id="hourSlider" min="0" max="23" value="12" aria-label="Select a time to view the crowd busyness">
+        <span class="tick-labels" id="tickLabels"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button container-->
+  <div class="button-container">
+    <button class="filter-button" data-filter="gallery" aria-label="Filter by gallery">
+      <img src="media/gallery.png" alt="Gallery" class="button-icon"> Gallery 
+    </button>
+    <button class="filter-button" data-filter="museum" aria-label="Filter by museum">
+      <img src="media/museum.png" alt="Museum" class="button-icon"> Museum 
+    </button>
+    <button class="filter-button" data-filter="park" aria-label="Filter by park">
+      <img src="media/park.png" alt="Park" class="button-icon"> Park 
+    </button>
+    <button class="filter-button" data-filter="restaurant" aria-label="Filter by restaurant">
+      <img src="media/restaurant.png" alt="Restaurant" class="button-icon"> Restaurant 
+    </button>
+    <button class="filter-button" data-filter="shop" aria-label="Filter by shopping">
+      <img src="media/shop.png" alt="Shop" class="button-icon"> Shopping 
+    </button>
+  </div>
+
+ 
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Mapbox JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+  <!-- Toast push-notification script -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toastElement = document.getElementById('toastDiv');
+  
+ 
+    // Hides toast after 10 second
+    setTimeout(() => {
+      toastElement.remove();
+    }, 10000);
+
+    // Hides toast if user clicks anywhere outside of it
+    document.addEventListener("click", function (event) {
+      // Check if click was outside toast
+      if (!toastElement.contains(event.target)) {
+        toastElement.remove();
+      }
+    });
+  });
+
+  </script>
+
+  <!-- JS link -->
+  <script src="script.js"></script>
+</body>
+</html>

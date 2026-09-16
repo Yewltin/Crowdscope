@@ -1,0 +1,4 @@
+Google drive address of the supplementary POI Dataset, this file contains the download link to a supplementary POI dataset used to enrich the original point-of-interest records:
+limited_POI_20250702.geojson: https://drive.google.com/file/d/1fzVeqN0fgv1IoD8Q_pSmd-LB9wSLktDh/view?usp=sharing
+museums_only.geojson: https://drive.google.com/file/d/1wjyP62_bN50_37XStR6lVQllj4jL9mNg/view?usp=sharing
+limited_POI_merged: https://drive.google.com/file/d/1zSHdFNaq6gMYyrUZ0eILm_5S7nLg8rHr/view?usp=sharing

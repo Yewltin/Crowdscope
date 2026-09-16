@@ -1,0 +1,2 @@
+Google Drive link to download the trained model (.joblib file):
+https://drive.google.com/file/d/18tbHXobVetstKOcObnWMdNQsAc6sXc-H/view?usp=sharing

@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+.env
+
+# VSCode config
+.vscode/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+
+# Project-specific ignores
+.pycache__
+.pyc
+app/geojson_inv.py
+frontend_dependencies
+known_hosts
+database_upload.py
+

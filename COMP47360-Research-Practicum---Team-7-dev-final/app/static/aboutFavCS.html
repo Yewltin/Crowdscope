@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CrowdScope: About Favourites</title>
+  <link rel="icon" type="image/png" href="media/CsFav.ico" />
+
+  <!-- Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link href="aboutStyle.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <img class="CsLogo" src="media/cscope.png" height="50" width="50" onclick="homePage()" alt="Click to return to the Home Page.">
+            <a id="crowdscope">Crowd<b>Scope</b></a>
+            <div class="dropdown ms-auto" id="menu-container">
+                <button class="btn btn-outline-primary dropdown-toggle" type="button" id="menuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open main menu">
+                Menu
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="menuButton">
+                    <li><a class="dropdown-item" href="index.html">Home</a></li>
+                    <li><a class="dropdown-item" href="aboutCrowdScope.html">Tutorial</a></li>
+                    <li><a class="dropdown-item" href="attractionsCrowdScope.html">Attractions</a></li>
+                    <li><a class="dropdown-item" href="crowdScope.html">Map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="inner-container">
+            <div class="button-container">
+                <a href="aboutLocalCS.html" class="nav-button">Locations</a>
+                <a href="aboutTimeCS.html" class="nav-button">Day & Time</a>
+                <a href="aboutMarkCS.html" class="nav-button">Markers</a>
+                <a href="aboutFavCS.html" class="nav-button">Favourites</a>
+                <a href="aboutZoomCS.html" class="nav-button">Controllers</a>
+            </div>
+
+            <div class="content-container">
+                <div class="text-section" >
+                    <b class="text-title">
+                    How does this work? <br>
+                    </b>
+                    <b class="text-heading">
+                    ⭐ Favourite Locations
+                    </b>
+                    <p class="text-paragraph">
+                    Tap the favourite button to save locations you visit often or want to keep an eye on. <br>
+                    Your saved spots are easy to access later, helping you quickly check crowd levels <br>
+                    or plan visits to your go-to places.
+                    </p>
+                </div>
+                <div class="image-section">
+                    <video autoplay loop muted playsinline controls aria-label="Demonstration of the favourites feature">
+                        <source src="media/Favourites.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <button class="btn btn-outline-primary" id="homeButton" onclick="mainPage()" alt="Click to return to the Map Page">Go to the Map</button>
+        </div>
+    </div>
+    <script src="aboutCS.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

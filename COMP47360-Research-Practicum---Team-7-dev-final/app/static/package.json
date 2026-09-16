@@ -1,0 +1,10 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "echo 'Port being used: $PORT' && npx http-server ./frontend -p $PORT --cors"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,48 @@
+# gradle/libs.versions.toml
+
+[versions]
+agp = "8.11.1"
+kotlin = "1.9.23"
+composeBom = "2024.04.00"
+mapbox = "11.13.4" # This is the version reference for the Mapbox libraries
+composeCompiler = "1.5.12" # Corrected version for Kotlin 1.9.23
+
+coreKtx = "1.16.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.9.2"
+activityCompose = "1.10.1"
+navigationCompose = "2.7.0" # Assuming you want to manage navigation-compose version here
+
+[libraries]
+androidxCoreKtx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidxNavigationCompose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" } # Updated for navigation-compose
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidxJunit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidxEspressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidxLifecycleRuntimeKtx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidxActivityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidxComposeBom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+
+androidxUi = { group = "androidx.compose.ui", name = "ui" }
+androidxUiGraphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidxUiTooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidxUiToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidxUiTestManifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidxUiTestJunit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidxMaterial3 = { group = "androidx.compose.material3", name = "material3" }
+
+# Consider adding other hardcoded versions here too if you want to centralize them
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version = "2.9.0" }
+converterGson = { group = "com.squareup.retrofit2", name = "converter-gson", version = "2.9.0" }
+converterScalars = { group = "com.squareup.retrofit2", name = "converter-scalars", version = "2.9.0" } # Check if used
+okhttpLoggingInterceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version = "4.9.3" }
+lifecycleRuntimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version = "2.6.2" }
+coilCompose = { group = "io.coil-kt", name = "coil-compose", version = "2.7.0" }
+coilGif = { group = "io.coil-kt", name = "coil-gif", version = "2.7.0" }
+coilBase = { group = "io.coil-kt", name = "coil-base", version = "2.7.0" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CrowdScope: About</title>
+  <link rel="icon" type="image/png" href="media/CsFav.ico" />
+
+  <!-- Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link href="aboutStyle.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <img class="CsLogo" src="media/cscope.png" height="50" width="50" onclick="homePage()" alt="Click to return to the Home Page.">
+            <a id="crowdscope">Crowd<b>Scope</b></a>
+       
+            <div class="dropdown ms-auto" id="menu-container">
+                <button class="btn btn-outline-primary dropdown-toggle" type="button" id="menuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open main menu">
+                Menu
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="menuButton">
+                    <li><a class="dropdown-item" href="index.html">Home</a></li>
+                    <li><a class="dropdown-item" href="aboutCrowdScope.html">Tutorial</a></li>
+                    <li><a class="dropdown-item" href="attractionsCrowdScope.html">Attractions</a></li>
+                    <li><a class="dropdown-item" href="crowdScope.html">Map</a></li>
+                </ul>
+            </div>
+         </div>
+        <div class="inner-container">
+            <div class="button-container">
+                <a href="aboutLocalCS.html" class="nav-button">Locations</a>
+                <a href="aboutTimeCS.html" class="nav-button">Day & Time</a>
+                <a href="aboutMarkCS.html" class="nav-button">Markers</a>
+                <a href="aboutFavCS.html" class="nav-button">Favourites</a>
+                <a href="aboutZoomCS.html" class="nav-button">Controllers</a>
+            </div>
+
+            <div class="content-container">
+                <div class="text-section">
+                    <b class="text-title">
+                    How does this work? <br>
+                    </b>
+                    <b class="text-heading">
+                    Click a button to see how to use the map features!
+                    </b>
+                    <p class="text-paragraph">
+                    These pages will provide you with the information you need to understand
+                    how to navigate the features of CrowdScope's map.
+                    </p>
+                    <div class="busy-container">
+                    <img id="busyScale" src="media/Busiest.png" alt="A scale showing crowd busyness relative to colour">
+                        <div class="busy-box">
+                            <b id="busyTitle"> Busyness Colour Scale:</b>
+                            <a id="busyText"> 
+                            This scale shows the heatmap colour <br>
+                            and its related crowd busyness.                        
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-section">
+                    <video autoplay loop muted playsinline>
+                        <source src="media/About.mp4" type="video/mp4" alt="About video">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <button class="btn btn-outline-primary" id="homeButton" onclick="mainPage()" aria-label="Click to return to the Map Page">Go to the Map</button>
+        </div>
+
+
+
+    </div>
+    <script src="aboutCS.js"></script>
+     <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

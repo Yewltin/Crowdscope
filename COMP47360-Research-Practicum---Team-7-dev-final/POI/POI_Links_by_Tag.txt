@@ -1,0 +1,7 @@
+The following links correspond to CSV files containing the names of POIs categorized by tag (e.g., gallery, museum, restaurant, etc.):
+restaurants: https://drive.google.com/file/d/1qdKkJPpHeQtOKa2nvyt5b8zbkkKvqQsr/view?usp=sharing
+parks: https://drive.google.com/file/d/1TsjzOJuyrqnTme-0iZaLFkfvbvU5xOgp/view?usp=sharing
+museums: https://drive.google.com/file/d/1Lv1jkaoNbcI1BuzmtGCU7GsRTYQmZOau/view?usp=sharing
+galleries: https://drive.google.com/file/d/15GEhjNTTKfMMfpX7mmkseMOO7VL6vhNa/view?usp=sharing
+department stores: https://drive.google.com/file/d/1XggAzTgG24lKYSFOV9P6MAXCHUUVT7w9/view?usp=sharing
+malls: https://drive.google.com/file/d/1f9Za8Rz5uB0v6dfY7orR1812DLq-cY-S/view?usp=sharing
