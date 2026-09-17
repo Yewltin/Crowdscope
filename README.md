@@ -34,13 +34,14 @@ This is my personal fork of the [CrowdScope project](https://github.com/smc94724
 
 ## Screenshots of Homepage Map UI
 
+**Controls can be seen, including zoom and joystick controls, allowing user to take full advantage of Mapbox's 3D layer** 
+
 <img width="1919" height="1052" alt="image" src="https://github.com/user-attachments/assets/26ac6dc1-4e96-4b43-9bcb-ce9454fcfc1c" />
 
 ---
 
-**Controls can be seen, including zoom and joystick controls, allowing user to take full advantage of Mapbox's 3D layer** 
 
----
+
 
 
 
