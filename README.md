@@ -11,7 +11,7 @@ This is my personal fork of the [CrowdScope project](https://github.com/smc94724
 ## My Contributions
 
 * **The Frontend Code is modular**: Code has been designed so that with updated data and simply changing latitude and longitude in Mapbox, CrowdScope can be used for any geographical area.
-* **All UI/UX Implemented**: Designed and implemented the UI and UX for the website as seen [here](#screenshots)
+* **All UI/UX Implemented**: Designed and implemented the UI and UX for the website as seen [here](#screenshots-of-homepage-map-ui)
 * **[Map / data visualization]**: [Describe the work completed.]
 * **[API integration]**: [Describe the work completed.]
 * **[Performance / optimization]**: [Describe the work completed.]
@@ -32,11 +32,17 @@ This is my personal fork of the [CrowdScope project](https://github.com/smc94724
 
 ---
 
-## Screenshots
+## Screenshots of Homepage Map UI
 
 <img width="1919" height="1052" alt="image" src="https://github.com/user-attachments/assets/26ac6dc1-4e96-4b43-9bcb-ce9454fcfc1c" />
 
 ---
+
+**Controls can be seen, including zoom and joystick controls, allowing user to take full advantage of Mapbox's 3D layer** 
+
+---
+
+
 
 
 
