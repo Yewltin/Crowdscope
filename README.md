@@ -2,7 +2,7 @@
 
 
 
-This is my personal fork of the [CrowdScope project](https://github.com/smc94724/COMP47360-Research-Practicum---Team-7), a research practicum at University College Dublin. I served as **Frontend Lead** on the five-member team, where my primary responsibilities included UI/UX design and implementation, the creation of the frontend code as a whole with the intention of modularity for ease of replication on further locations, and general testing, bug fixing, and page responsiveness.
+This is my personal fork of the [CrowdScope project](https://github.com/smc94724/COMP47360-Research-Practicum---Team-7), a research practicum at University College Dublin. I served as **Frontend Lead** on the team, where my primary responsibilities included UI/UX design and implementation, the creation of the frontend code as a whole with the intention of modularity for ease of replication on further locations, and general testing, bug fixing, and page responsiveness.
 
 **Live Deployment**: Currently in the process of updating backend and data to get it live again, watch this space!
 
