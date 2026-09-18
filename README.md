@@ -32,7 +32,7 @@ This is my personal fork of the [CrowdScope project](https://github.com/smc94724
 
 ---
 
-## Screenshots of Homepage Map UI
+## Examples of Homepage Map UI
 
 https://github.com/user-attachments/assets/bb33ff8e-43c1-46a1-9469-e7b55e680cce
 
